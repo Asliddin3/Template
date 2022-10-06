@@ -22,8 +22,7 @@ func main() {
 		logger.String("host", cfg.PostgresHost),
 		logger.Int("port", cfg.PostgresPort),
 		logger.String("database", cfg.PostgresDatabase))
-
-	connDB, err := db.ConnectToDB(cfg)
+	connDB, err := db.ConnectToDb(cfg)
 	if err != nil {
 		log.Fatal("sqlx connection to postgres error", logger.Error(err))
 	}
