@@ -4,6 +4,17 @@ package user;
 
 service UserService{
   rpc Create(User) returns(User);
+  rpc GetUser(RequesUser) returns(User);
+  rpc UpdateUser(User) returns(User);
+  rpc DeleteUser(RequesUser) returns(Users);
+  rpc GetUsers(Empty) returns(Users);
+}
+message Empty{}
+message RequesUser{
+  int64 id=1;
+}
+message Users{
+  repeated User users=1;
 }
 
 message User{
