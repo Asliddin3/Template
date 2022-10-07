@@ -49,14 +49,14 @@ func (l *loggerImpl) Debug(msg string, fields ...Field){
 	l.zap.Debug(msg ,fields...)
 }
 func (l *loggerImpl) Info(msg string, fields ...Field){
-	l.zap.Warn(msg, fields...)
+	l.zap.Info(msg, fields...)
 }
 func (l *loggerImpl) Warn(msg string, fields ...Field) {
 	l.zap.Warn(msg, fields...)
 }
 
 func (l *loggerImpl) Error(msg string, fields ...Field){
-	l.zap.Fatal(msg,fields...)
+	l.zap.Error(msg,fields...)
 }
 func (l *loggerImpl) Fatal(msg string, fields ...Field) {
 	l.zap.Fatal(msg, fields...)

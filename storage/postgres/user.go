@@ -60,7 +60,7 @@ func (r *userRepo) GetUser(req *pb.RequesUser) (*pb.User, error) {
 
 func (r *userRepo) DeleteUser(user *pb.RequesUser) (*pb.Users, error) {
 	usersRepo := pb.Users{}
-	_, err := r.db.Exec(`delete from users where id=$1`, user.Id)
+	_, err := r.db.Exec(`delet from users where id=$1`, user.Id)
 	if err != nil {
 		return &pb.Users{}, err
 	}
